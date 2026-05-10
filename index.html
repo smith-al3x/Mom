@@ -5,83 +5,110 @@
   <title>For Mom</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <style>
+  <style>
+    /* 1. Base Setup & Background */
     body {
-      font-family: system-ui, -apple-system;
+      font-family: system-ui, -apple-system, sans-serif;
       /* Pastel Pink Background */
       background-color: #ffe4e1; 
-      /* Flower Overlay: This creates a subtle pattern of cherry blossoms */
-      background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Ctext y='35' font-size='25' alpha='0.3'%3E🌸%3C/text%3E%3C/svg%3E");
-      color: #5d2a42; /* Deep berry color for better readability on pink */
+      /* Subtle Flower Pattern Overlay */
+      background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Ctext y='35' font-size='25' fill-opacity='0.2'%3E🌸%3C/text%3E%3C/svg%3E");
       margin: 0;
       padding: 40px 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      box-sizing: border-box;
+    }
+
+    /* 2. The Frosted Glass Container */
+    .main-container {
+      background: rgba(255, 255, 255, 0.75); /* Opaque white */
+      backdrop-filter: blur(10px); /* Blurs flowers behind the box */
+      -webkit-backdrop-filter: blur(10px);
+      padding: 40px 30px;
+      max-width: 450px;
+      width: 100%;
+      border-radius: 30px;
+      box-shadow: 0 10px 40px rgba(216, 27, 96, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.4);
       text-align: center;
     }
-  
+
+    /* 3. Typography */
     h1 {
       font-size: 2.2rem;
-      margin-bottom: 10px;
-      color: white; /* Darker hot pink for the title */
+      margin-top: 0;
+      margin-bottom: 15px;
+      color: #d81b60; /* Hot pink title */
     }
-  
+
     p {
       font-size: 1.1rem;
-      max-width: 420px;
-      margin: 0 auto;
-      opacity: 0.9;
+      color: #5d2a42; /* Dark berry for readability */
+      margin-bottom: 30px;
+      line-height: 1.6;
     }
-  
-    .card {
-      background: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
-      backdrop-filter: blur(5px); /* Softens the flowers behind the card */
-      padding: 24px;
-      margin: 40px auto;
-      max-width: 420px;
-      border-radius: 20px;
-      box-shadow: 0 8px 20px rgba(216, 27, 96, 0.15);
-      border: 1px solid #f8bbd0;
+
+    /* 4. Buttons (The "Links") */
+    .link-wrapper {
+      margin-top: 25px;
     }
-  
+
     a {
       display: block;
-      /* Hot Pink Buttons */
-      background: #ff1493; 
+      background: #ff1493; /* Hot Pink */
       color: white;
       text-decoration: none;
-      padding: 16px;
-      margin: 14px 0;
-      border-radius: 50px; /* Rounded pill shape for a softer look */
+      padding: 18px;
+      margin: 15px 0;
+      border-radius: 50px; /* Pill shape */
       font-size: 1.1rem;
       font-weight: bold;
-      transition: transform 0.2s, background 0.2s;
+      transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+      box-shadow: 0 4px 15px rgba(255, 20, 147, 0.3);
     }
-  
+
     a:hover {
-      background: #ff69b4; /* Lighter hot pink on hover */
-      transform: translateY(-2px);
+      background: #ff69b4; /* Lighter hot pink */
+      transform: scale(1.03);
+      box-shadow: 0 6px 20px rgba(255, 20, 147, 0.4);
     }
-  
+
     footer {
-      margin-top: 40px;
-      font-size: 0.9rem;
-      opacity: 0.7;
+      margin-top: 30px;
+      font-size: 0.85rem;
       color: #ad1457;
+      opacity: 0.7;
     }
   </style>
 </head>
 
 <body>
-  <h1> Happy Mother's day! </h1>
-  <p>
-    I wish I could be there in person, I love you mom!
-  </p>
 
-  <div class="card">
-    <a href="https://youtu.be/S9jzMpEfg-I">🎥 Video Message (NEW!) </a>
-  </div>
-  
-  <div class="card">
-    <a href="https://share.icloud.com/photos/0c2z5xrb8uBMIZIpnxRztg20Q">📸Photos of Us Over The Years!</a>
+  <div class="main-container">
+    <h1>🌸 Happy Mother's Day! 🌸</h1>
+    
+    <p>
+      I wish I could be there in person to celebrate with you. I love you so much, Mom!
+    </p>
+
+    <div class="link-wrapper">
+      <!-- Video Message Link -->
+      <a href="https://youtu.be/S9jzMpEfg-I" target="_blank">
+        🎥 Video Message (NEW!)
+      </a>
+
+      <!-- Shared Photo Album Link -->
+      <a href="https://share.icloud.com/photos/0c2z5xrb8uBMIZIpnxRztg20Q" target="_blank">
+        📸 Photos of Us Over The Years!
+      </a>
+    </div>
+
+    <footer>
+      Made with ❤️ by Alex :)
+    </footer>
   </div>
 
 </body>
